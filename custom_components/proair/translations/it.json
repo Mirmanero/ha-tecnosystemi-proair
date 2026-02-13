@@ -1,0 +1,57 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connetti a ProAir",
+        "description": "Inserisci i dati di connessione per il tuo sistema Tecnosystemi ProAir.",
+        "data": {
+          "host": "Indirizzo IP",
+          "port": "Porta",
+          "pin": "PIN"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Impossibile connettersi al sistema ProAir. Verifica indirizzo IP e porta.",
+      "invalid_auth": "PIN non valido. Controlla e riprova.",
+      "unknown": "Si è verificato un errore imprevisto."
+    },
+    "abort": {
+      "already_configured": "Questo sistema ProAir è già configurato."
+    }
+  },
+  "entity": {
+    "climate": {
+      "zone_climate": {
+        "name": "Clima"
+      }
+    },
+    "sensor": {
+      "canal_temperature": {
+        "name": "Temperatura canale"
+      },
+      "zone_temperature": {
+        "name": "Temperatura"
+      },
+      "zone_humidity": {
+        "name": "Umidità"
+      }
+    },
+    "switch": {
+      "power": {
+        "name": "Alimentazione"
+      }
+    },
+    "select": {
+      "operating_mode": {
+        "name": "Modalità operativa",
+        "state": {
+          "heating": "Riscaldamento",
+          "cooling": "Raffrescamento",
+          "dehumidify": "Deumidificazione",
+          "ventilation": "Ventilazione"
+        }
+      }
+    }
+  }
+}
