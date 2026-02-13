@@ -26,6 +26,11 @@
         "name": "Clima"
       }
     },
+    "number": {
+      "canal_temperature_set": {
+        "name": "Setpoint temperatura canale"
+      }
+    },
     "sensor": {
       "canal_temperature": {
         "name": "Temperatura canale"
