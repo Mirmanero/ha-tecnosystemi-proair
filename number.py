@@ -3,8 +3,6 @@
 from __future__ import annotations
 
 import logging
-from typing import Any
-
 from homeassistant.components.number import NumberDeviceClass, NumberEntity, NumberMode
 from homeassistant.const import UnitOfTemperature
 from homeassistant.core import HomeAssistant
@@ -15,7 +13,6 @@ from homeassistant.helpers.update_coordinator import CoordinatorEntity
 from . import ProAirConfigEntry
 from .const import DOMAIN
 from .coordinator import ProAirCoordinator
-from .proair_lib.protocol.commands import build_upd_cu
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -71,21 +68,7 @@ class ProAirCanalTempNumber(CoordinatorEntity[ProAirCoordinator], NumberEntity):
 
     async def async_set_native_value(self, value: float) -> None:
         """Set the canal temperature."""
-        proair = self.coordinator.proair
-        cu = self.coordinator.data
-
-        def _set_canal_temp() -> None:
-            cmd = build_upd_cu(
-                pin=proair.pin,
-                is_off=cu.is_off,
-                is_cooling=cu.is_cooling,
-                operating_mode=cu.operating_mode,
-                t_can=value,
-                f_inv=cu.f_inv,
-                f_est=cu.f_est,
-            )
-            proair._send_and_check(cmd)
-            proair._last_status = None
-
-        await self.hass.async_add_executor_job(_set_canal_temp)
+        await self.hass.async_add_executor_job(
+            self.coordinator.proair.set_canal_temperature, value
+        )
         await self.coordinator.async_request_refresh()

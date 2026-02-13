@@ -116,6 +116,21 @@ class ProAir:
         self._send_and_check(cmd)
         self._last_status = None
 
+    def set_canal_temperature(self, temp_celsius: float) -> None:
+        """Imposta la temperatura del canale."""
+        cu = self._get_current_status()
+        cmd = build_upd_cu(
+            pin=self.pin,
+            is_off=cu.is_off,
+            is_cooling=cu.is_cooling,
+            operating_mode=cu.operating_mode,
+            t_can=temp_celsius,
+            f_inv=cu.f_inv,
+            f_est=cu.f_est,
+        )
+        self._send_and_check(cmd)
+        self._last_status = None
+
     def set_cooling_mode(self, mode: int) -> None:
         """Imposta la modalità estiva (1=raff, 2=deum, 3=vent)."""
         if mode not in (1, 2, 3):
