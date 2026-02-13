@@ -3,7 +3,7 @@
   "name": "Tecnosystemi ProAir",
   "codeowners": [],
   "config_flow": true,
-  "documentation": "https://github.com/your-repo/ha-proair",
+  "documentation": "https://github.com/Mirmanero/ha-tecnosystemi-proair",
   "integration_type": "hub",
   "iot_class": "local_polling",
   "requirements": [],
