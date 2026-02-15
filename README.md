@@ -25,16 +25,15 @@ Unofficial custom integration for [Home Assistant](https://www.home-assistant.io
 
 ### HACS (recommended)
 
+[![Open in HACS](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=Mirmanero&repository=ha-tecnosystemi-proair&category=integration)
+
+Click the button above, or add manually:
+
 1. Open HACS in Home Assistant
 2. Click the three dots menu (top right) → **Custom repositories**
-3. Add this repository URL:
-   ```
-   https://github.com/Mirmanero/ha-tecnosystemi-proair
-   ```
-   Category: **Integration**
-4. Click **Add**
-5. Search for **Tecnosystemi ProAir** in HACS and install it
-6. Restart Home Assistant
+3. Add `https://github.com/Mirmanero/ha-tecnosystemi-proair` with category **Integration**
+4. Search for **Tecnosystemi ProAir** and install it
+5. Restart Home Assistant
 
 ### Manual
 
