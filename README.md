@@ -4,7 +4,11 @@
 
 [![Open in HACS](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=Mirmanero&repository=ha-tecnosystemi-proair&category=integration)
 
-Custom integration for [Home Assistant](https://www.home-assistant.io/) to control **Tecnosystemi ProAir** climate systems over the local network (TCP).
+Unofficial custom integration for [Home Assistant](https://www.home-assistant.io/) to control **Tecnosystemi ProAir** climate systems over the local network (TCP).
+
+> **Note:** This is an independent project, not affiliated with or supported by Tecnosystemi. Use at your own risk.
+>
+> **Tested only with ProAir Polaris 3x.** If you successfully use this integration with a different ProAir model, please [open an issue](https://github.com/Mirmanero/ha-tecnosystemi-proair/issues) to let me know — I'd love to update the compatibility list.
 
 ## Features
 
